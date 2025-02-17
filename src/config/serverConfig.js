@@ -6,7 +6,3 @@ module.exports = {
   PORT: process.env.PORT,
   DB_URL: process.env.DB_URL,
 };
-
-// lHkYAuHjL36zpFMR
-
-// harshikeshkoili214
