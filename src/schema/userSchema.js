@@ -56,12 +56,12 @@ const userSchema = new mongoose.Schema(
 
 userSchema.pre("save", async function () {
   // Here u can modify your user before it is saved in mongodb
-  console.log("Executing pre save hook");
-  console.log(this);
+  // console.log("Executing pre save hook");
+  // console.log(this);
   const hashedPassword = await bcrypt.hash(this.password, 10);
   this.password = hashedPassword;
-  console.log(this);
-  console.log("Exitting pre save hook and now creating user");
+  // console.log(this);
+  // console.log("Exitting pre save hook and now creating user");
 });
 
 // Now we want to create a collection........
