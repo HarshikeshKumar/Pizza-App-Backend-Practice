@@ -1,13 +1,8 @@
-const UserRepository = require("../repositories/userRepository");
-const UserService = require("../services/userService.js");
+const { registerUser } = require("../services/userService.js");
 
 async function createUser(req, res) {
-  //console.log("Create User Controller called");
-  //console.log(req.body);
-  const userService = new UserService(new UserRepository());
-
   try {
-    const response = await userService.registerUser(req.body);
+    const response = await registerUser(req.body);
     return res.status(201).json({
       message: "Successfully registered the user",
       success: true,
